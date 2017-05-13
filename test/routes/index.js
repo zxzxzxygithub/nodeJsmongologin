@@ -20,7 +20,7 @@ router.route("/login").get(function(req,res){    // 到达此路径则渲染logi
 			console.log(err);
 		}else if(!doc){ 								//查询不到用户名匹配信息，则用户名不存在
 			req.session.error = '用户名不存在';
-			res.send(404);							//	状态码返回404
+			res.send(404);							805///	状态码返回404
 		//	res.redirect("/login");
 		}else{ 
 			if(req.body.upwd != doc.password){ 	//查询到匹配用户名的信息，但相应的password属性不匹配
